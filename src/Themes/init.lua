@@ -17,7 +17,7 @@ return {
     Placeholder = "#7bbec9",    
     Background = "#0a192f",   
     Button = "#1976d2",        
-    Icon = "#4dd0e1",          
+    Icon = "#a1a1aa",          
      },
     Light = {
         Name = "Light",
