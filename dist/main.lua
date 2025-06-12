@@ -5895,7 +5895,7 @@ local z
 do
 y=b("ImageLabel",{
 Image="rbxassetid://123767073052336",
-Size=UDim2.new(0,22,0,22),
+Size=UDim2.new(0,35,0,35),
 Position=UDim2.new(0.5,0,0.5,0),
 LayoutOrder=-1,
 AnchorPoint=Vector2.new(0.5,0.5),
