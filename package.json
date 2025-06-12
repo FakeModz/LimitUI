@@ -1,0 +1,23 @@
+{
+  "name": "vitepress-project",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "dev": "darklua process main.lua dist/main.lua --config darklua.dev.config.json && lua build/init.lua",
+    "build": "darklua process src/init.lua dist/main.lua --config darklua.dev.config.json && lua build/init.lua"
+  },
+  "devDependencies": {
+    "vue": "3.2.44",
+    "vitepress": "1.0.0-alpha.28"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
+  }
+}
