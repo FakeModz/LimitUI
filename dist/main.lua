@@ -5894,7 +5894,7 @@ local z
 
 do
 y=b("ImageLabel",{
-Image="",
+Image="rbxassetid://123767073052336",
 Size=UDim2.new(0,22,0,22),
 Position=UDim2.new(0.5,0,0.5,0),
 LayoutOrder=-1,
