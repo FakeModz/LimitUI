@@ -798,7 +798,7 @@ TextColor3="Text",
 })
 
 local s=g("Frame",{
-Size=UDim2.new(1,0,0,42),
+Size=UDim2.new(1,0,0,26),
 Parent=k,
 BackgroundTransparency=1
 },{
