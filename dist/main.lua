@@ -780,7 +780,7 @@ end
 
 local r=g("TextBox",{
 BackgroundTransparency=1,
-TextSize=16,
+TextSize=12,
 FontFace=Font.new(f.Font,Enum.FontWeight.Regular),
 Size=UDim2.new(1,q and-29 or 0,1,0),
 PlaceholderText=i,
@@ -798,7 +798,7 @@ TextColor3="Text",
 })
 
 local s=g("Frame",{
-Size=UDim2.new(1,0,0,26),
+Size=UDim2.new(1,0,0,24),
 Parent=k,
 BackgroundTransparency=1
 },{
@@ -3396,7 +3396,7 @@ Hover=false,
 local q=j(o.PlaceholderText,o.InputIcon,o.InputFrame.UIElements.Container,o.Type,function(q)
 o:Set(q)
 end)
-q.Size=UDim2.new(1,0,0,o.Type=="Input"and 26 or 148)
+q.Size=UDim2.new(1,0,0,o.Type=="Input"and 24 or 48)
 
 e("UIScale",{
 Parent=q,
