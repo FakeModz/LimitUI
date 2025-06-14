@@ -780,7 +780,7 @@ end
 
 local r=g("TextBox",{
 BackgroundTransparency=1,
-TextSize=12,
+TextSize=16,
 FontFace=Font.new(f.Font,Enum.FontWeight.Regular),
 Size=UDim2.new(1,q and-29 or 0,1,0),
 PlaceholderText=i,
@@ -798,7 +798,7 @@ TextColor3="Text",
 })
 
 local s=g("Frame",{
-Size=UDim2.new(1,0,0,24),
+Size=UDim2.new(1,0,0,20),
 Parent=k,
 BackgroundTransparency=1
 },{
