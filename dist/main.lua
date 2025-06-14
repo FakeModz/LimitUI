@@ -3396,7 +3396,7 @@ Hover=false,
 local q=j(o.PlaceholderText,o.InputIcon,o.InputFrame.UIElements.Container,o.Type,function(q)
 o:Set(q)
 end)
-q.Size=UDim2.new(1,0,0,o.Type=="Input"and 24 or 48)
+q.Size=UDim2.new(1,0,0,o.Type=="Input"and 20 or 20)
 
 e("UIScale",{
 Parent=q,
