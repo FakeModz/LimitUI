@@ -10,7 +10,7 @@
     To view the source code, see the 'Src' folder on the official GitHub repository.
     
     Author: .ftgs#0 (Discord User)
-    Github: https://github.com/Footagesus/WindUI
+    Github: https://github.com/Footagesus/LimitHub
     Discord: https://discord.gg/84CNGY5wAV
 ]]
 
@@ -34,7 +34,7 @@ Font="rbxassetid://12187365364",
 CanDraggable=true,
 Theme=nil,
 Themes=nil,
-WindUI=nil,
+LimitHub=nil,
 Signals={},
 Objects={},
 FontObjects={},
@@ -100,7 +100,7 @@ Grey="#484848",
 }
 
 function g.Init(h)
-g.WindUI=h
+g.LimitHub=h
 end
 
 
@@ -126,9 +126,9 @@ if not i then local
 k, l=j:find":%d+: "
 
 
-warn("[ WindUI: DEBUG Mode ] "..j)
+warn("[ LimitHub: DEBUG Mode ] "..j)
 
-return g.WindUI:Notify{
+return g.LimitHub:Notify{
 Title="DEBUG Mode: Error",
 Content=not l and j or j:sub(l+1),
 Duration=8,
@@ -373,7 +373,7 @@ s.ImageLabel.ImageRectOffset=g.Icon(j)[2].ImageRectPosition
 s.ImageLabel.ImageRectSize=g.Icon(j)[2].ImageRectSize
 end
 if string.find(j,"http")then
-local t="WindUI/"..o.."/Assets/."..p.."-"..k..".png"
+local t="LimitHub/"..o.."/Assets/."..p.."-"..k..".png"
 local u,v=pcall(function()
 task.spawn(function()
 if not isfile(t)then
@@ -388,7 +388,7 @@ s.ImageLabel.Image=getcustomasset(t)
 end)
 end)
 if not u then
-warn("[ WindUI.Creator ]  '"..identifyexecutor().."' doesnt support the URL Images. Error: "..v)
+warn("[ LimitHub.Creator ]  '"..identifyexecutor().."' doesnt support the URL Images. Error: "..v)
 
 s:Destroy()
 end
@@ -1772,7 +1772,7 @@ local h=g.Button
 local i=g.Input
 
 function b.new(j,k,n)
-local o=a.load'e'.Init(j.WindUI.ScreenGui.KeySystem)
+local o=a.load'e'.Init(j.LimitHub.ScreenGui.KeySystem)
 local p=o.Create(true)
 
 
@@ -1832,7 +1832,7 @@ t=d.Image(
 j.Icon,
 j.Title..":"..j.Icon,
 0,
-j.WindUI.Window,
+j.LimitHub.Window,
 "KeySystem",
 j.IconThemed
 )
@@ -2342,7 +2342,7 @@ Thumbnail=g.Thumbnail,
 Buttons=g.Buttons
 }
 
-local i=a.load'e'.Init(g.WindUI.ScreenGui.Popups)
+local i=a.load'e'.Init(g.LimitHub.ScreenGui.Popups)
 local j=i.Create(true)
 
 local k=200
@@ -2364,7 +2364,7 @@ o=d.Image(
 h.Icon,
 h.Title..":"..h.Icon,
 0,
-g.WindUI.Window,
+g.LimitHub.Window,
 "Popup",
 g.IconThemed
 )
@@ -2611,7 +2611,7 @@ end
 
 function d.CreateConfig(e,f)
 local g={
-Path="WindUI/"..d.Folder.."/config/"..f..".json",
+Path="LimitHub/"..d.Folder.."/config/"..f..".json",
 
 Elements={}
 }
@@ -3555,7 +3555,7 @@ Position=UDim2.new(-10,0,-10,0),
 Visible=false,
 Active=false,
 GroupTransparency=1,
-Parent=q.WindUI.DropdownGui,
+Parent=q.LimitHub.DropdownGui,
 AnchorPoint=Vector2.new(1,0),
 },{
 r.UIElements.Menu,
@@ -3889,14 +3889,14 @@ local p,q=pcall(function()
 toclipboard(k.Code)
 end)
 if p then
-j.WindUI:Notify{
+j.LimitHub:Notify{
 Title="Success",
 Content="The "..o.." copied to your clipboard.",
 Icon="check",
 Duration=5,
 }
 else
-j.WindUI:Notify{
+j.LimitHub:Notify{
 Title="Error",
 Content="The "..o.." is not copied. Error: "..q,
 Icon="x",
@@ -4685,7 +4685,7 @@ local h=e.ScrollSlider
 
 local i={
 Window=nil,
-WindUI=nil,
+LimitHub=nil,
 Tabs={},
 Containers={},
 SelectedTab=nil,
@@ -4698,7 +4698,7 @@ OnChangeFunc=function(i)end
 
 function i.Init(j,k,n,o)
 i.Window=j
-i.WindUI=k
+i.LimitHub=k
 i.ToolTipParent=n
 i.TabHighlight=o
 return i
@@ -4722,7 +4722,7 @@ ContainerFrame=nil,
 }
 
 local n=i.Window
-local o=i.WindUI
+local o=i.LimitHub
 
 i.TabCount=i.TabCount+1
 local p=i.TabCount
@@ -5024,7 +5024,7 @@ for t,u in pairs(s)do
 k[t]=function(v,w)
 w.Parent=v.UIElements.ContainerFrame
 w.Window=n
-w.WindUI=o local
+w.LimitHub=o local
 
 x, y=u:New(w)
 table.insert(v.Elements,y)
@@ -5709,7 +5709,7 @@ TopBarButtons={},
 
 
 if o.Folder then
-makefolder("WindUI/"..o.Folder)
+makefolder("LimitHub/"..o.Folder)
 end
 
 local p=b("UICorner",{
@@ -6551,7 +6551,7 @@ k=true
 end
 if not k then
 k=not k
-n.WindUI:Notify{
+n.LimitHub:Notify{
 Title="Minimize",
 Content="You've closed the Window. "..M,
 Icon="eye-off",
@@ -6573,7 +6573,7 @@ task.wait(.06)
 o.Closed=false
 
 e(o.UIElements.Main.Background,0.2,{
-ImageTransparency=n.Transparent and n.WindUI.TransparencyValue or 0,
+ImageTransparency=n.Transparent and n.LimitHub.TransparencyValue or 0,
 },Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
 
 e(o.UIElements.Main.Background,0.4,{
@@ -6663,9 +6663,9 @@ end
 function o.ToggleTransparency(M,N)
 
 o.Transparent=N
-n.WindUI.Transparent=N
+n.LimitHub.Transparent=N
 
-o.UIElements.Main.Background.ImageTransparency=N and n.WindUI.TransparencyValue or 0
+o.UIElements.Main.Background.ImageTransparency=N and n.LimitHub.TransparencyValue or 0
 
 o.UIElements.MainBar.Background.ImageTransparency=N and 0.97 or 0.95
 
@@ -6764,7 +6764,7 @@ end
 
 
 local M=a.load't'
-local N=M.Init(o,n.WindUI,n.Parent.Parent.ToolTips,t)
+local N=M.Init(o,n.LimitHub,n.Parent.Parent.ToolTips,t)
 N:OnChange(function(O)o.CurrentTab=O end)
 
 o.TabModule=M
@@ -7128,7 +7128,7 @@ local e=gethui and gethui()or game.CoreGui
 
 
 aa.ScreenGui=ae("ScreenGui",{
-Name="WindUI",
+Name="LimitHub",
 Parent=e,
 IgnoreGuiInset=true,
 ScreenInsets="None",
@@ -7154,12 +7154,12 @@ Name="ToolTips"
 })
 
 aa.NotificationGui=ae("ScreenGui",{
-Name="WindUI/Notifications",
+Name="LimitHub/Notifications",
 Parent=e,
 IgnoreGuiInset=true,
 })
 aa.DropdownGui=ae("ScreenGui",{
-Name="WindUI/Dropdowns",
+Name="LimitHub/Dropdowns",
 Parent=e,
 IgnoreGuiInset=true,
 })
@@ -7177,7 +7177,7 @@ local h=g.Init(aa.NotificationGui)
 function aa.Notify(i,j)
 j.Holder=h.Frame
 j.Window=aa.Window
-j.WindUI=aa
+j.LimitHub=aa
 return g.New(j)
 end
 
@@ -7222,7 +7222,7 @@ end
 
 
 function aa.Popup(i,j)
-j.WindUI=aa
+j.LimitHub=aa
 return a.load'h'.new(j)
 end
 
@@ -7230,8 +7230,8 @@ end
 function aa.CreateWindow(i,j)
 local k=a.load'v'
 
-if not isfolder"WindUI"then
-makefolder"WindUI"
+if not isfolder"LimitHub"then
+makefolder"LimitHub"
 end
 if j.Folder then
 makefolder(j.Folder)
@@ -7239,7 +7239,7 @@ else
 makefolder(j.Title)
 end
 
-j.WindUI=aa
+j.LimitHub=aa
 j.Parent=aa.ScreenGui.Window
 
 if aa.Window then
@@ -7299,3 +7299,4 @@ return q
 end
 
 return aa
+
