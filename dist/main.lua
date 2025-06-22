@@ -2520,19 +2520,30 @@ e:Update(Color3.fromHex(f.value),f.transparency or nil)
 end
 end
 },
-Dropdown={
-Save=function(e)
-return{
-__type=e.__type,
-value=e.Value,
-}
-end,
-Load=function(e,f)
-if e then
-e:Select(f.value)
-end
-end
+Dropdown = {
+    Save = function(e)
+        return {
+            __type = e.__type,
+            value = e.Value,
+        }
+    end,
+    Load = function(e, f)
+        if e and f and f.value then
+            -- Deteksi jika value adalah table (Multi Dropdown)
+            if typeof(f.value) == "table" then
+                if typeof(e.Set) == "function" then
+                    e:Set(f.value)
+                end
+            else
+                -- Single Dropdown
+                if typeof(e.Select) == "function" then
+                    e:Select(f.value)
+                end
+            end
+        end
+    end,
 },
+
 Input={
 Save=function(e)
 return{
