@@ -2520,30 +2520,19 @@ e:Update(Color3.fromHex(f.value),f.transparency or nil)
 end
 end
 },
-Dropdown = {
-    Save = function(e)
-        return {
-            __type = e.__type,
-            value = e.Value,
-        }
-    end,
-    Load = function(e, f)
-        if e and f and f.value then
-            if typeof(f.value) == "table" then
-                for _, v in ipairs(f.value) do
-                    if typeof(e.Select) == "function" then
-                        e:Select(v)
-                    end
-                end
-            else
-                if typeof(e.Select) == "function" then
-                    e:Select(f.value)
-                end
-            end
-        end
-    end,
+Dropdown={
+Save=function(e)
+return{
+__type=e.__type,
+value=e.Value,
+}
+end,
+Load=function(e,f)
+if e then
+e:Select(f.value)
+end
+end
 },
-
 
 Input={
 Save=function(e)
