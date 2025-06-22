@@ -2529,13 +2529,13 @@ Dropdown = {
     end,
     Load = function(e, f)
         if e and f and f.value then
-            -- Deteksi jika value adalah table (Multi Dropdown)
             if typeof(f.value) == "table" then
-                if typeof(e.Set) == "function" then
-                    e:Set(f.value)
+                for _, v in ipairs(f.value) do
+                    if typeof(e.Select) == "function" then
+                        e:Select(v)
+                    end
                 end
             else
-                -- Single Dropdown
                 if typeof(e.Select) == "function" then
                     e:Select(f.value)
                 end
@@ -2543,6 +2543,7 @@ Dropdown = {
         end
     end,
 },
+
 
 Input={
 Save=function(e)
