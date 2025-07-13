@@ -60,14 +60,15 @@ return {
         Icon = "#a1a1aa",
     },
     Indigo = {
-        Name = "Indigo",
-        Accent = "#312e81",
-        Outline = "#FFFFFF",
-        Text = "#ffeded",
-        Placeholder = "#977d7d",
-        Background = "#1e1b4b",
-        Button = "#52525b",
-        Icon = "#a1a1aa",
-    },
+    Name        = "Indigo",
+    Accent      = "#3f3fb1",  -- Indigo medium (gradient start-mid)
+    Outline     = "#7c66ff",  -- Violet terang (gradient end)
+    Text        = "#eae6ff",  -- Soft white-violet (lebih kalem)
+    Placeholder = "#b3a3da",  -- Violet pudar (untuk teks samar)
+    Background  = "#312e81",  -- Indigo gelap (dasar)
+    Button      = "#4f46e5",  -- Indigo terang (tombol utama)
+    Icon        = "#675df3",  -- Lembut & menyatu (untuk icon)
+}, 
+
     
 }
