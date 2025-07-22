@@ -7283,10 +7283,7 @@ aa.Window=q
 
 
 
-return q
-end
 
-return aa
 
 -- Tambahan modul Group untuk UI dropdown toggle
 local Framework = a.load('a')
@@ -7346,3 +7343,7 @@ end
 return {
     Group = CreateDropdownGroup
 }
+   return q
+end
+
+return aa
